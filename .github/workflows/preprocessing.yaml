@@ -34,7 +34,11 @@ jobs:
       # Langkah 5: Simpan dataset yang sudah diproses sebagai artifact
       # Ini memenuhi syarat "mengembalikan sebuah dataset terbaru"
       - name: Upload processed dataset artifact
-        uses: actions/upload-artifact@v3
+        uses: stefanzweifel/git-auto-commit-action@v4
         with:
           name: processed-dataset
-          path: preprocessing/dataset/wine_processed_clened.csv
+          file_pattern: preprocessing/dataset/wine_processed_clened.csv
+          commit_user_name: "GitHub Actions Bot"
+          commit_user_email: "actions@github.com"
+          commit_author: "GitHub Actions Bot <actions@github.com>"
+          
