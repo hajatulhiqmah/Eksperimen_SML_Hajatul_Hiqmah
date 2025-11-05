@@ -5,7 +5,7 @@ on:
     branches: [ main, master ] # Sesuaikan dengan nama branch utama Anda
     paths:
       - 'preprocessing/**'      # Hanya jalankan jika ada perubahan di folder preprocessing
-      - 'namadataset_raw/**'  # Atau jika data mentah berubah
+      - 'wine_quality/**'  # Atau jika data mentah berubah
 
 jobs:
   preprocess:
@@ -29,7 +29,7 @@ jobs:
 
       # Langkah 4: Jalankan skrip preprocessing
       - name: Run preprocessing script
-        run: python preprocessing/automate_Nama-siswa.py
+        run: python preprocessing/automate_HajatulHiqmah.py
 
       # Langkah 5: Simpan dataset yang sudah diproses sebagai artifact
       # Ini memenuhi syarat "mengembalikan sebuah dataset terbaru"
@@ -37,4 +37,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: processed-dataset
-          path: preprocessing/namadataset_preprocessing/wine_processed.csv
+          path: preprocessing/dataset/wine_processed_clened.csv
