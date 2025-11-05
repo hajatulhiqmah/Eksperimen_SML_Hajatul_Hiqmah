@@ -8,7 +8,7 @@ on:
       - 'wine_quality/**'  # Atau jika data mentah berubah
 
 jobs:
-  preprocess:
+  preprocess-data:
     runs-on: ubuntu-latest
     steps:
       # Langkah 1: Checkout kode repositori
@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v3
 
       # Langkah 2: Siapkan lingkungan Python
-      - name: Set up Python
+      - name: Set up Python 3.9
         uses: actions/setup-python@v4
         with:
           python-version: '3.9' # Anda bisa ganti versinya
