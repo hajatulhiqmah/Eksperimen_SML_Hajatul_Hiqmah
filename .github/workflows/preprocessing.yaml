@@ -13,7 +13,7 @@ jobs:
     steps:
       # Langkah 1: Checkout kode repositori
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3 
 
       # Langkah 2: Siapkan lingkungan Python
       - name: Set up Python
